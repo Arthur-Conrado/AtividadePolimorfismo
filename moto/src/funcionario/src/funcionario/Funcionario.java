@@ -1,16 +1,23 @@
-public class Funcionario {
-    Private String nome;
-    Private Double salarioBase;
+package funcionario;
 
-    public Funcionario (String nome, Double salarioBase){
+public class Funcionario {
+    private String nome;
+    private Double salarioBase;
+
+    public Funcionario(String nome, Double salarioBase){
         this.nome = nome;
         this.salarioBase = salarioBase;
     }
-    public abstract Double calcularSalario();
 
-    public void exibir(){
-        System.out.println("Funcionario :"+nome);
-        System.out.prinln("Salario: R$"+calcularSalario());
+    public String getNome(){ return nome; }
+    public Double getSalarioBase(){ return salarioBase; }
+
+    public Double calcularSalario(){
+        return salarioBase;
     }
 
+    @Override
+    public String toString(){
+        return "Nome: " + nome + ", Salário base: " + salarioBase + ", Salário total: " + calcularSalario();
+    }
 }

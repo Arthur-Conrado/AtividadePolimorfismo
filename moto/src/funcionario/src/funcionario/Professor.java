@@ -1,6 +1,8 @@
+package funcionario;
+
 public class Professor extends Funcionario{
-    Private Integer numeroDeAulas;
-    Private Double valorPorAula;
+    private Integer numeroDeAulas;
+    private Double valorPorAula;
 
     public Professor(String nome, Double salarioBase, Integer numeroDeAulas, Double valorPorAula){
         super(nome, salarioBase);
@@ -10,7 +12,11 @@ public class Professor extends Funcionario{
 
     @Override
     public Double calcularSalario(){
-        return salarioBase + (numeroDeAulas * valorPorAula);
+        return super.calcularSalario() + (numeroDeAulas * valorPorAula);
     }
 
+    @Override
+    public String toString(){
+        return "Cargo: Professor, " + super.toString() + ", Nº aulas: " + numeroDeAulas + ", Valor/aula: " + valorPorAula;
+    }
 }
