@@ -8,9 +8,24 @@ public class Gerente extends Funcionario {
         this.bonus = bonus;
     }
 
+    
+    public Double getBonus(){
+        return bonus;
+    }
+
+    public void setBonus(Double bonus){
+        this.bonus = bonus;
+    }
+
+    
     @Override
     public Double calcularSalario(){
         return super.calcularSalario() + bonus;
+    }
+
+   
+    public void autorizarOrcamento(Double valor){
+        System.out.println(getNome() + " autorizou orçamento de R$ " + valor);
     }
 
     @Override

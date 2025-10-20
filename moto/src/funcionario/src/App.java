@@ -13,5 +13,6 @@ public class App {
         System.out.println(p);
         System.out.println(g);
         System.out.println(s);
+        
     }
 }

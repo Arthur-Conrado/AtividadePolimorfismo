@@ -9,8 +9,21 @@ public class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    public String getNome(){ return nome; }
-    public Double getSalarioBase(){ return salarioBase; }
+    public String getNome(){
+         return nome;
+        }
+    public String setNome(String nome){
+        this.nome = nome;
+            return nome;
+    }
+    public Double getSalarioBase(){
+         return salarioBase;
+        }
+
+    public Double setSalarioBase(Double salarioBase){
+        this.salarioBase = salarioBase;
+        return salarioBase;
+    }
 
     public Double calcularSalario(){
         return salarioBase;
